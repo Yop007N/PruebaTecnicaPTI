@@ -7,15 +7,26 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 
 
 @Entity
 @Table(name = "medidores")
+@SequenceGenerator(name = "medidores_id_seq", sequenceName = "medidores_id_seq", allocationSize = 1)
+@NoArgsConstructor  // Constructor sin argumentos para JPA
+@AllArgsConstructor  // Constructor con todos los argumentos gracias a Lombok
+@Getter
+@Setter
 public class Medidores {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "medidores_id_seq")
 	private Long id ;
 	@Column(length = 50)
 	private String serial;
@@ -56,9 +67,5 @@ public class Medidores {
 	public void setCabina(Cabinas cabina) {
 		this.cabina = cabina;
 	}
-
-		
-
-	
 	
 }

@@ -1,0 +1,221 @@
+{
+	"info": {
+		"_postman_id": "b07a9d06-d125-496a-b33b-76e6478e4609",
+		"name": "PruebaTecnicaPTI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25936210"
+	},
+	"item": [
+		{
+			"name": "Cabinas",
+			"item": [
+				{
+					"name": "ListarCabina",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cabinas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cabinas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AgregarCabina",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cabinas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cabinas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarCabina",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Nombre de la Cabina actualizado\",\r\n  \"url\": \"http://ejemplo.com\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cabinas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cabinas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarCabina",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Nombre de la Cabina actualizado\",\r\n  \"url\": \"http://ejemplo.com\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cabinas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cabinas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Medidores",
+			"item": [
+				{
+					"name": "ListarMedidores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cabinas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cabinas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AgregarMedidor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n\r\n        \"serial\": \"teste\",\r\n        \"cabina\": {\r\n            \"id\": 3,\r\n            \"nombre\": \"Nombre de la Cabina\",\r\n            \"url\": \"http://ejemplo.com\"\r\n        }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/medidores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"medidores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarMedidor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n\r\n        \"serial\": \"testeactualizado\",\r\n        \"cabina\": {\r\n            \"id\": 3,\r\n            \"nombre\": \"Nombre de la Cabina\",\r\n            \"url\": \"http://ejemplo.com\"\r\n        }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/medidores/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"medidores",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarMedidor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Nombre de la Cabina actualizado\",\r\n  \"url\": \"http://ejemplo.com\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/medidores/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"medidores",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

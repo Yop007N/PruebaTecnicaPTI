@@ -11,3 +11,4 @@ Work in progress. Documentation will be expanded with architecture, setup, and u
 - Define project goals and scope
 - Document setup and execution flow
 - Add automated checks and tests
+
